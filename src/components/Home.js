@@ -8,7 +8,7 @@ export default function Home() {
       <Hero />
       <div className="box cta">
         <p className="has-text-centered">
-          <span className="tag is-primary">New</span> CS4990
+          <span className="tag is-primary">New</span> Enter your Covid-19 test results and keep track!
         </p>
       </div>
       <HomeContent />

@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="hero is-primary">
       <div className="hero-body">
         <div className="container">
-          <img src="energy.jpg" alt="conserve energy" />
+          <img src="COVID-19 Header.jpg" alt="Covid-19" />
         </div>
       </div>
     </section>

@@ -8,9 +8,9 @@ export default function HomeContent() {
                 <div className="card is-shady">
                     <div className="card-content">
                         <div className="content">
-                            <h4>COVID19LMFAOWHATAJOKE</h4>
-                            <p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer enim neque volutpat ac tincidunt vitae semper quis. Accumsan tortor posuere ac ut consequat semper viverra nam.</p>
-                            <p><a href="/">Learn more</a></p>
+                            <h4>What is Covid-19</h4>
+                            <p>Influenza (Flu) and COVID-19 are both contagious respiratory illnesses, but they are caused by different viruses. COVID-19 is caused by infection with a new coronavirus (called SARS-CoV-2), and flu is caused by infection with influenza viruses.</p>
+                            <p><a href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">Learn more</a></p>
                         </div>
                     </div>
                 </div>
@@ -19,10 +19,9 @@ export default function HomeContent() {
                 <div className="card is-shady">
                     <div className="card-content">
                         <div className="content">
-                            <h4>Water conservation</h4>
-                            <p>Ut venenatis tellus in metus vulputate. Amet consectetur adipiscing elit pellentesque. Sed arcu non odio euismod lacinia at quis risus. Faucibus turpis in eu mi bibendum neque egestas cmonsu songue. Phasellus vestibulum lorem
-                            sed risus.</p>
-                            <p><a href="/">Learn more</a></p>
+                            <h4>How to prevent Covid-19?</h4>
+                            <p>Wear a mask to protect yourself and others and stop the spread of COVID-19. Stay at least 6 feet (about 2 arm lengths) from others who don’t live with you. Avoid crowds. The more people you are in contact with, the more likely you are to be exposed to COVID-19.</p>
+                            <p><a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html">Learn more</a></p>
                         </div>
                     </div>
                 </div>
@@ -31,9 +30,9 @@ export default function HomeContent() {
                 <div className="card is-shady">
                      <div className="card-content">
                         <div className="content">
-                            <h4>Solar energy</h4>
-                            <p>Imperdiet dui accumsan sit amet nulla facilisi morbi. Fusce ut placerat orci nulla pellentesque dignissim enim. Libero id faucibus nisl tincidunt eget nullam. Commodo viverra maecenas accumsan lacus vel facilisis.</p>
-                            <p><a href="/">Learn more</a></p>
+                            <h4>How to get Covid-19 Vaccine in Orange County?</h4>
+                            <p>Phased Approach to Vaccine Distribution - Given the limited initial supply of COVID-19 vaccines, distribution will be limited at first and increase over time. Determinations will be based on reaching critical populations to reduce morbidity and mortality rates due to the transmission of COVID-19.</p>
+                            <p><a href="https://occovid19.ochealthinfo.com/covid-19-vaccination-distribution">Learn more</a></p>
                         </div>
                     </div>
                 </div>
