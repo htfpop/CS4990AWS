@@ -8,7 +8,7 @@ export default function HomeContent() {
                 <div className="card is-shady">
                     <div className="card-content">
                         <div className="content">
-                            <h4>COVID19</h4>
+                            <h4>COVID19LMFAOWHATAJOKE</h4>
                             <p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer enim neque volutpat ac tincidunt vitae semper quis. Accumsan tortor posuere ac ut consequat semper viverra nam.</p>
                             <p><a href="/">Learn more</a></p>
                         </div>
