@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import FormErrors from "../FormErrors";
 import Validate from "../utility/FormValidation";
+import { Auth } from "aws-amplify"
 
 class Register extends Component {
   state = {
@@ -38,6 +39,25 @@ class Register extends Component {
     }
 
     // AWS Cognito integration here
+    const { username, email, password } = this.state;
+    try{
+      const signUpResponse = await Auth.signUp({
+        username,
+        password,
+        attributes: {
+          email: email
+        }
+      });
+      console.log(signUpResponse);
+      this.props.history.push("/welcome");
+    }catch(error) {
+      let err = null;
+      !error.message ? err = { "message": error } : err = error
+      this.setState({
+        ...this.state.errors,
+        cognito: err
+      })
+    }
   };
 
   onInputChange = event => {
@@ -57,8 +77,8 @@ class Register extends Component {
           <form onSubmit={this.handleSubmit}>
             <div className="field">
               <p className="control">
-                <input 
-                  className="input" 
+                <input
+                  className="input"
                   type="text"
                   id="username"
                   aria-describedby="userNameHelp"
@@ -70,8 +90,8 @@ class Register extends Component {
             </div>
             <div className="field">
               <p className="control has-icons-left has-icons-right">
-                <input 
-                  className="input" 
+                <input
+                  className="input"
                   type="email"
                   id="email"
                   aria-describedby="emailHelp"
@@ -86,8 +106,8 @@ class Register extends Component {
             </div>
             <div className="field">
               <p className="control has-icons-left">
-                <input 
-                  className="input" 
+                <input
+                  className="input"
                   type="password"
                   id="password"
                   placeholder="Password"
@@ -101,8 +121,8 @@ class Register extends Component {
             </div>
             <div className="field">
               <p className="control has-icons-left">
-                <input 
-                  className="input" 
+                <input
+                  className="input"
                   type="password"
                   id="confirmpassword"
                   placeholder="Confirm password"
