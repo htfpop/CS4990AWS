@@ -8,6 +8,7 @@ export default class Navbar extends Component {
       Auth.signOut();
       this.props.auth.setAuthStatus(false);
       this.props.auth.setUser(null);
+      window.location.reload()
     }catch(error) {
       console.log(error.message);
     }
