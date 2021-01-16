@@ -52,11 +52,13 @@ class Register extends Component {
       this.props.history.push("/welcome");
     }catch(error) {
       let err = null;
-      !error.message ? err = { "message": error } : err = error
+      !error.message ? err = { "message": error } : err = error;
       this.setState({
-        ...this.state.errors,
-        cognito: err
-      })
+        errors:{
+          ...this.state.errors,
+          cognito: err
+        }
+      });
     }
   };
 

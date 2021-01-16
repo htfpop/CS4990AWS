@@ -31,17 +31,17 @@ export default class Products extends Component {
       <Fragment>
         <section className="section">
           <div className="container">
-            <h1>Energy Products</h1>
-            <p className="subtitle is-5">Invest in a clean future with our efficient and cost-effective green energy products:</p>
+            <h1>Covid Test Results</h1>
+            <p className="subtitle is-5">You can check your past Covid-19 test result that you submitted</p>
             <br />
             <div className="columns">
               <div className="column">
                 <div className="tile is-ancestor">
                   <div className="tile is-4 is-parent  is-vertical">
-                    { 
+                    {
                       this.state.products && this.state.products.length > 0
                       ? this.state.products.map(product => <Product name={product.productname} id={product.id} key={product.id} />)
-                      : <div className="tile notification is-warning">No products available</div>
+                      : <div className="tile notification is-warning">No results available.</div>
                     }
                   </div>
                 </div>
