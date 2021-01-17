@@ -39,9 +39,14 @@ export default class Products extends Component {
                 <div className="tile is-ancestor">
                   <div className="tile is-4 is-parent  is-vertical">
                     {
-                      this.state.products && this.state.products.length > 0
-                      ? this.state.products.map(product => <Product name={product.productname} id={product.id} key={product.id} />)
-                      : <div className="tile notification is-warning">No results available.</div>
+                      this.props.auth.isAuthenticated && this.props.auth.user &&
+                        <p>
+                        Username: {this.props.auth.user.username}
+                        <br />
+                        Date: {this.props.auth.user.attributes['custom:CovidTestDate']}
+                        <br />
+                        Result: {this.props.auth.user.attributes['custom:CovidResult']}
+                      </p>
                     }
                   </div>
                 </div>
