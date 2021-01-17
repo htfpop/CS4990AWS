@@ -1,4 +1,4 @@
-//Starting 4990 Project
+
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
