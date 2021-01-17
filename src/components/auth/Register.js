@@ -9,6 +9,8 @@ class Register extends Component {
     email: "",
     password: "",
     confirmpassword: "",
+    CovidTestDate: "",
+    CovidResult: "",
     errors: {
       cognito: null,
       blankfield: false,
@@ -39,13 +41,15 @@ class Register extends Component {
     }
 
     // AWS Cognito integration here
-    const { username, email, password } = this.state;
+    const { username, email, password, CovidTestDate, CovidResult } = this.state;
     try{
       const signUpResponse = await Auth.signUp({
         username,
         password,
         attributes: {
-          email: email
+          email: email,
+          'custom:CovidTestDate':CovidTestDate,
+          'custom:CovidResult': CovidResult
         }
       });
       console.log(signUpResponse);
@@ -134,6 +138,30 @@ class Register extends Component {
                 <span className="icon is-small is-left">
                   <i className="fas fa-lock"></i>
                 </span>
+              </p>
+            </div>
+            <div className="field">
+              <p className="control">
+                <input
+                  className="input"
+                  type="text"
+                  id="CovidTestDate"
+                  placeholder="Enter COVID Test Date (mm/dd/yyyy)"
+                  value={this.state.CovidTestDate}
+                  onChange={this.onInputChange}
+                />
+              </p>
+            </div>
+            <div className="field">
+              <p className="control">
+                <input
+                  className="input"
+                  type="text"
+                  id="CovidResult"
+                  placeholder="Test result (Positive/Negative)"
+                  value={this.state.CovidResult}
+                  onChange={this.onInputChange}
+                />
               </p>
             </div>
             <div className="field">
